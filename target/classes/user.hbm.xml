@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="epd.User" table="public.user">
+		<id name="id" type="long" column="id">
+		</id>
+		<property name="username">
+			<column name="userename" />
+		</property>
+		<property name="createdBy">
+			<column name="createdBy" />
+		</property>
+		<property name="createdDate" type="date">
+			<column name="createDate" />
+		</property>
+	</class>
+</hibernate-mapping>

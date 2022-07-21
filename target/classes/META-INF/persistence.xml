@@ -1,0 +1,25 @@
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+    version="2.0">
+    <persistence-unit name="epd" transaction-type="RESOURCE_LOCAL">
+        <!-- Persistence provider -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Entity classes -->
+        <class>epd.User</class>
+        <class>User</class>
+
+        <properties>
+            <!-- The JDBC URL to the database instance -->
+            <property name="javax.persistence.jdbc.url"
+                value="jdbc:postgresql://localhost:5432/postgres" />
+
+            <!-- The database username -->
+            <property name="javax.persistence.jdbc.user" value="postgres" />
+
+            <!-- The database password -->
+            <property name="javax.persistence.jdbc.password" value="postgres" />
+        </properties>
+    </persistence-unit>
+</persistence>
